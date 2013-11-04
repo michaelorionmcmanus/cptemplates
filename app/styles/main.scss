@@ -1,0 +1,144 @@
+@import "bootstrap";
+@import "utilities";
+//@import "../images/spriting/*.png";
+//@include all-spriting-sprites;
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    background-image: url('../images/sample/bgnoise.gif');
+}
+
+.hero-unit {
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.main {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.logo {
+  font-size: 200%;
+  line-height: 15px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+.display-i {
+  display: inline;
+}
+
+.display-b {
+  display: block;
+}
+
+.display-ib {
+  display: inline-block;
+}
+
+.t-caps {
+  text-transform: uppercase;
+}
+
+.t-dark {
+  color: #333;
+}
+
+.t-black {
+  color: black !important;
+}
+
+.t-small {
+  font-size: 30%;
+}
+
+h1,h2,h3,h4,h5,h6,
+.navbar-brand,
+.navbar-nav,
+.breadcrumb {
+  font-family: "brandon-grotesque",sans-serif;
+}
+
+.breadcrumb a {
+  color: #333;
+}
+
+body, p {
+  font-family: "ff-meta-serif-web-pro";
+}
+
+p {
+  font: 20px/28px "ff-meta-serif-web-pro",serif;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar-default {
+  background: none;
+  border: none;
+}
+
+.navbar-nav {
+  & > li {
+    margin-top: 5px;
+    & > a {
+      font-size: 16px;
+      .caret {
+        margin-top: -5px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-nav {
+    float: right !important;
+  }
+}
+element.style {
+}
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+a.list-group-item {
+  color: #555555;
+}
+
+.list-group-item {
+  background-color: #f8f8f8;
+}
+
+.legend-unit {
+  margin-bottom: 10px;
+  .glyphicon {
+    width: 25px;
+  }
+  .legend-text {
+    max-width: 85%;
+  }
+}

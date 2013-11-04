@@ -1,0 +1,125 @@
+/* Padding & Margin helpers
+First letter is M for margin or P for padding
+Second letter indicates the direction
+    - a for all
+    - l for left
+    - r for right
+    - b for bottom
+    - t for top
+    - v for vertical
+    - h for horizontal
+Third letter is for the size of the padding
+    - n  for 0
+    - xs for 5px
+    - s  for 10px
+    - m  for 15px
+    - l  for 20px
+    - xl for 30px
+$example: .pam ---> padding all medium
+/* CSS variables */
+$pm_N: 0;
+$pm_XS: 5px;
+$pm_S: 10px;
+$pm_M: 15px;
+$pm_L: 20px;
+$pm_XL: 30px;
+// Padding none
+.pan,.pvn,.ptn {padding-top: $pm_N !important}
+.pan,.phn,.prn {padding-right: $pm_N !important}
+.pan,.pvn,.pbn {padding-bottom: $pm_N !important}
+.pan,.phn,.pln {padding-left: $pm_N !important}
+// Padding extra small
+.paxs,.pvxs,.ptxs{padding-top:$pm_XS !important}
+.paxs,.phxs,.prxs{padding-right:$pm_XS !important}
+.paxs,.pvxs,.pbxs{padding-bottom:$pm_XS !important}
+.paxs,.phxs,.plxs{padding-left:$pm_XS !important}
+// Padding small
+.pas,.pvs,.pts{padding-top:$pm_S !important}
+.pas,.phs,.prs{padding-right:$pm_S !important}
+.pas,.pvs,.pbs{padding-bottom:$pm_S !important}
+.pas,.phs,.pls{padding-left:$pm_S !important}
+// Padding medium
+.pam,.pvm,.ptm{padding-top:$pm_M !important}
+.pam,.phm,.prm{padding-right:$pm_M !important}
+.pam,.pvm,.pbm{padding-bottom:$pm_M !important}
+.pam,.phm,.plm{padding-left:$pm_M !important}
+// Padding large
+.pal,.pvl,.ptl{padding-top:$pm_L !important}
+.pal,.phl,.prl{padding-right:$pm_L !important}
+.pal,.pvl,.pbl{padding-bottom:$pm_L !important}
+.pal,.phl,.pll{padding-left:$pm_L !important}
+// Padding extra large
+.paxl,.pvxl,.ptxl{padding-top:$pm_XL !important}
+.paxl,.phxl,.prxl{padding-right:$pm_XL !important}
+.paxl,.pvxl,.pbxl{padding-bottom:$pm_XL !important}
+.paxl,.phxl,.plxl{padding-left:$pm_XL !important}
+
+// Margin none
+.man,.mvn,.mtn {margin-top: $pm_N !important}
+.man,.mhn,.mrn {margin-right: $pm_N !important}
+.man,.mvn,.mbn {margin-bottom: $pm_N !important}
+.man,.mhn,.mln {margin-left: $pm_N !important}
+// Margin extra small
+.maxs,.mvxs,.mtxs{margin-top:$pm_XS !important}
+.maxs,.mhxs,.mrxs{margin-right:$pm_XS !important}
+.maxs,.mvxs,.mbxs{margin-bottom:$pm_XS !important}
+.maxs,.mhxs,.mlxs{margin-left:$pm_XS !important}
+// Margin small
+.mas,.mvs,.mts{margin-top:$pm_S !important}
+.mas,.mhs,.mrs{margin-right:$pm_S !important}
+.mas,.mvs,.mbs{margin-bottom:$pm_S !important}
+.mas,.mhs,.mls{margin-left:$pm_S !important}
+// Margin medium
+.mam,.mvm,.mtm{margin-top:$pm_M !important}
+.mam,.mhm,.mrm{margin-right:$pm_M !important}
+.mam,.mvm,.mbm{margin-bottom:$pm_M !important}
+.mam,.mhm,.mlm{margin-left:$pm_M !important}
+// Margin large
+.mal,.mvl,.mtl{margin-top:$pm_L !important}
+.mal,.mhl,.mrl{margin-right:$pm_L !important}
+.mal,.mvl,.mbl{margin-bottom:$pm_L !important}
+.mal,.mhl,.mll{margin-left:$pm_L !important}
+// Margin extra large
+.maxl,.mvxl,.mtxl{margin-top:$pm_XL !important}
+.maxl,.mhxl,.mrxl{margin-right:$pm_XL !important}
+.maxl,.mvxl,.mbxl{margin-bottom:$pm_XL !important}
+.maxl,.mhxl,.mlxl{margin-left:$pm_XL !important}
+
+.t-s-10 {
+  font-size: 10%;
+}
+.t-s-20 {
+  font-size: 20%;
+}
+.t-s-30 {
+  font-size: 30%;
+}
+.t-s-40 {
+  font-size: 40%;
+}
+.t-s-50 {
+  font-size: 50%;
+}
+.t-s-60 {
+  font-size: 60%;
+}
+.t-s-70 {
+  font-size: 70%;
+}
+.t-s-80 {
+  font-size: 80%;
+}
+.t-s-90 {
+  font-size: 90%;
+}
+.t-s-100 {
+   font-size: 100%;
+}
+
+.t-bold {
+  font-weight: bold;
+}
+
+.pointer {
+  cursor: pointer;
+}
