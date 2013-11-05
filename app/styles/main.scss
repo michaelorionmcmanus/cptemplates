@@ -91,16 +91,22 @@ body, p {
 
 p {
   font: 20px/28px "ff-tisa-web-pro",serif;
-  color: #222;
+  color: #444;
   -webkit-font-smoothing: antialiased;
 }
 
 .navbar-default {
-  background: none;
   border: none;
+  background: none;
 }
 
 .navbar-nav {
+  background: white;
+  margin-top: 0;
+  padding-left: 10px;
+  @media (min-width: $grid-float-breakpoint) {
+    background: none;
+  }
   & > li {
     margin-top: 5px;
     & > a {
