@@ -6,3 +6,5 @@ app/bower_components
 .idea
 .DS_Store
 .idea/
+.grunt
+.grunt/*
