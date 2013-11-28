@@ -81,6 +81,13 @@ h1,h2,h3,h4,h5,h6,
   font-family: "ff-dagny-web-pro",sans-serif;
 }
 
+.navbar-brand {
+  span {
+    //border-bottom: #3FC3C9 solid 2px;
+    //border-bottom: rgba(63, 195, 201, 0.44) solid 1px;
+  }
+}
+
 .breadcrumb a {
   color: #333;
 }
@@ -98,6 +105,15 @@ p {
 .navbar-default {
   border: none;
   background: none;
+  .navbar-toggle {
+    margin-top: 13px;
+  }
+}
+
+.navbar-collapse {
+  &.in {
+    margin-top: 10px;
+  }
 }
 
 .navbar-nav {
@@ -151,4 +167,54 @@ a.list-group-item {
 
 .thumbnail .caption {
   line-height: 1.1;
+}
+
+
+.site-search {
+  border-radius: 0px;
+  background: none;
+  font-style: italic;
+  cursor: pointer;
+  border: none;
+  @include box-shadow(none);
+  padding-left: 0px;
+  padding-top: 15px;
+  &::-webkit-input-placeholder {
+    color: #aaa;
+    //text-align: right;
+    &:before {
+      padding-top: 2px;
+      font-style: normal;
+      font-family: "Glyphicons Halflings";
+      content: "\e003";
+      font-size: 120%;
+      color: #ccc;
+    }
+    &:after {
+      content: "  Site Search";
+      padding-bottom: 10px;
+      font-size: 120%;
+    }
+  }
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: red;
+  }
+  &:focus {
+    cursor: text;
+    border: solid 1px #DDD;
+    &::-webkit-input-placeholder {
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: "";
+      }
+    }
+    padding: 6px 12px;
+    margin-top: 10px;
+    @include box-shadow(none);
+    border: #ccc solid 1px;
+  }
 }
