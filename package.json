@@ -29,7 +29,11 @@
     "time-grunt": "~0.1.1",
     "grunt-webp": "~0.0.1",
     "grunt-modernizr": "~0.3.0",
-    "grunt-responsive-images": "~0.0.3"
+    "grunt-responsive-images": "~0.0.3",
+    "grunt-gh-pages": "~0.9.0",
+    "js-beautify": "~1.3.4",
+    "grunt-include-replace": "~1.1.1",
+    "grunt-processhtml": "~0.2.5"
   },
   "engines": {
     "node": ">=0.8.0"
