@@ -115,6 +115,13 @@ p {
     margin-top: 10px;
   }
 }
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-collapse {
+    &.in {
+      margin-top: 0px;
+    }
+  }
+}
 
 .navbar-nav {
   background: white;
@@ -187,63 +194,5 @@ a.list-group-item {
   padding-left: 13px;
   padding-right: 13px;
 }
-
-.search-container {
-  li {
-    &.search {
-      input {
-        border: none;
-      }
-    }
-  }
-  &.search-active {
-    li {
-      display: none;
-      &.search {
-        display: block;
-        form {
-          width: 80%;
-
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: $grid-float-breakpoint) {
-  .search-container {
-    li {
-      &.search {
-        form {
-          display: none;
-        }
-      }
-    }
-    &.search-active {
-      width: 70%;
-      transition: width 0.5s;
-      li {
-        display: none;
-        &.search {
-          width: 100%;
-          a {
-            width: 6%;
-          }
-          display: block;
-          form {
-            display: block;
-            width: 93%;
-            input {
-              margin-top: 6px;
-              border: #ccc solid 1px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
 
 
