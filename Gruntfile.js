@@ -17,7 +17,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
+  grunt.loadNpmTasks('assemble');
   // configurable paths
   var yeomanConfig = {
     app: 'app',
@@ -39,6 +39,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server']
       },
+      assemble: {
+        files: ['<%= yeoman.app %>/**/*.hbs'],
+        tasks: ['assemble']
+      },
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
@@ -49,7 +53,7 @@ module.exports = function (grunt) {
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
-      },
+      }
     },
 
     responsive_images: {
@@ -424,27 +428,17 @@ module.exports = function (grunt) {
       },
       src: ['**']
     },
-    includereplace: {
-      dist: {
-        options: {
-          // Task-specific options go here.
-        },
-        // Files to perform replacements and includes with
-        src: 'dist/index.html',
-        // Destination directory to copy files to
-        dest: ''
-      }
-    },
-    processhtml: {
+    assemble: {
       options: {
-        data: {
-          message: 'Hello world!'
-        }
+//        assets: 'assets',
+//        plugins: ['permalinks'],
+        partials: ['<%= yeoman.app %>/partials/**/*.hbs']
+//        layout: ['layouts/default.hbs'],
+//        data: ['data/*.{json,yml}']
       },
-      dist: {
-        files: {
-          'dist/index.html': ['dist/index.html']
-        }
+      pages: {
+        src: ['<%= yeoman.app %>/*.hbs'],
+        dest: './'
       }
     }
   });
@@ -472,6 +466,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'assemble',
         'useminPrepare',
         'concurrent:dist',
         'requirejs',
@@ -481,9 +476,7 @@ module.exports = function (grunt) {
         'uglify',
         'copy',
 //        'rev',
-      'processhtml',
-      'usemin',
-      'includereplace'
+        'usemin'
     ]);
 
     grunt.registerTask('default', [

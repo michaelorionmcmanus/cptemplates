@@ -173,48 +173,77 @@ a.list-group-item {
 .site-search {
   border-radius: 0px;
   background: none;
-  font-style: italic;
-  cursor: pointer;
-  border: none;
+  border: #ccc solid 1px;
   @include box-shadow(none);
-  padding-left: 0px;
-  padding-top: 15px;
-  &::-webkit-input-placeholder {
-    color: #aaa;
-    //text-align: right;
-    &:before {
-      padding-top: 2px;
-      font-style: normal;
-      font-family: "Glyphicons Halflings";
-      content: "\e003";
-      font-size: 120%;
-      color: #ccc;
-    }
-    &:after {
-      content: "  Site Search";
-      padding-bottom: 10px;
-      font-size: 120%;
-    }
-  }
-  &:-moz-placeholder,
-  &::-moz-placeholder,
-  &:-ms-input-placeholder {
-    color: red;
-  }
   &:focus {
     cursor: text;
     border: solid 1px #DDD;
-    &::-webkit-input-placeholder {
-      &:before {
-        content: "";
-      }
-      &:after {
-        content: "";
-      }
-    }
-    padding: 6px 12px;
-    margin-top: 10px;
     @include box-shadow(none);
     border: #ccc solid 1px;
   }
 }
+
+.navbar-nav > li > a {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.search-container {
+  li {
+    &.search {
+      input {
+        border: none;
+      }
+    }
+  }
+  &.search-active {
+    li {
+      display: none;
+      &.search {
+        display: block;
+        form {
+          width: 80%;
+
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .search-container {
+    li {
+      &.search {
+        form {
+          display: none;
+        }
+      }
+    }
+    &.search-active {
+      width: 70%;
+      transition: width 0.5s;
+      li {
+        display: none;
+        &.search {
+          width: 100%;
+          a {
+            width: 6%;
+          }
+          display: block;
+          form {
+            display: block;
+            width: 93%;
+            input {
+              margin-top: 6px;
+              border: #ccc solid 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
