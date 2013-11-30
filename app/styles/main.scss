@@ -4,10 +4,10 @@
 //@include all-spriting-sprites;
 
 body {
-    background: #fafafa;
+    background: #fafafa url('../images/sample/bgnoise.gif');
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
-    background-image: url('../images/sample/bgnoise.gif');
+    padding-top: 65px;
 }
 
 .hero-unit {
@@ -93,11 +93,11 @@ h1,h2,h3,h4,h5,h6,
 }
 
 body, p {
-  font-family: "ff-tisa-web-pro";
+  font-family: "Georgia";
 }
 
 p {
-  font: 20px/28px "ff-tisa-web-pro",serif;
+  font: 18px/26px "Georgia",serif;
   color: #444;
   -webkit-font-smoothing: antialiased;
 }
@@ -142,11 +142,7 @@ p {
 
 }
 
-@media (min-width: $grid-float-breakpoint) {
-  .navbar-nav {
-    float: right !important;
-  }
-}
+
 element.style {
 }
 .list-group-item:last-child {
@@ -178,10 +174,15 @@ a.list-group-item {
 
 
 .site-search {
+  font-family: "Georgia";
   border-radius: 0px;
   background: none;
   border: #ccc solid 1px;
   @include box-shadow(none);
+  height: 26px;
+  padding: 3px 5px;
+  font-style: italic;
+  margin-top: 3px;
   &:focus {
     cursor: text;
     border: solid 1px #DDD;
@@ -190,9 +191,49 @@ a.list-group-item {
   }
 }
 
-.navbar-nav > li > a {
-  padding-left: 13px;
-  padding-right: 13px;
+.navbar-nav {
+  & > li > a {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  li.search {
+    form {
+      width: 90%;
+      margin: 0px 0 10px 10px;
+    }
+  }
 }
 
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-nav {
+    float: right !important;
+    li > a {
+      padding-bottom: 10px;
+      padding-left: 7px;
+    }
+    li.search {
+      form {
+        margin: 8px 0 0 0;
+        width: auto;
+      }
+    }
+  }
+}
+
+.navbar-fixed-top {
+  background: #fafafa url('../images/sample/bgnoise.gif');
+  max-width: 1020px;
+  margin: 0 auto;
+  hr {
+    margin: 5px 14px 0 14px;
+    border-top: solid 1px #ddd;
+  }
+  .navbar-header {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+  .collapse {
+    margin-right: 15px;
+  }
+}
 
