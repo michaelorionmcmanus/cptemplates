@@ -81,15 +81,6 @@ h1,h2,h3,h4,h5,h6,
   font-family: "ff-dagny-web-pro",sans-serif;
 }
 
-.navbar-brand {
-  span {
-    @media (min-width: $grid-float-breakpoint) {
-      //font-size: 28px;
-    }
-    //font-size: 20px;
-  }
-}
-
 .breadcrumb a {
   color: #333;
 }
@@ -226,8 +217,6 @@ a.list-group-item {
 }
 
 .navbar-fixed-top {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
   .inner-wrapper {
     max-width: 1020px;
     margin: 0 auto;
@@ -314,6 +303,7 @@ a.list-group-item {
     width: 400px;
     li.calendar-item {
       & > a {
+        width: 100%;
         display: inline-block;
         padding: 5px 10px !important;
         span {
@@ -321,14 +311,29 @@ a.list-group-item {
             min-width: 88px;
           }
           &.details {
-            width: 290px;
-            padding: 0 10px 0 0;
+            //padding: 0 10px 0 0;
           }
         }
       }
     }
   }
 }
+
+@media (min-width: $grid-float-breakpoint) {
+  .stills {
+    .thumbnail {
+      background: black;
+      img {
+        max-height: 65%;
+        padding: 15px;
+      }
+      .caption {
+        background: white;
+      }
+    }
+  }
+}
+
 .swipe {
   overflow: hidden;
   visibility: hidden;
