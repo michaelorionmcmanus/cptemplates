@@ -83,8 +83,10 @@ h1,h2,h3,h4,h5,h6,
 
 .navbar-brand {
   span {
-    //border-bottom: #3FC3C9 solid 2px;
-    //border-bottom: rgba(63, 195, 201, 0.44) solid 1px;
+    @media (min-width: $grid-float-breakpoint) {
+      font-size: 28px;
+    }
+    font-size: 20px;
   }
 }
 
@@ -131,7 +133,7 @@ p {
     background: none;
   }
   & > li {
-    margin-top: 5px;
+    //margin-top: 5px;
     & > a {
       font-size: 16px;
       .caret {
@@ -207,13 +209,19 @@ a.list-group-item {
 @media (min-width: $grid-float-breakpoint) {
   .navbar-nav {
     float: right !important;
-    li > a {
-      padding-bottom: 10px;
-      padding-left: 7px;
+    li {
+      & > .dropdown-menu li a {
+        padding: 10px;
+      }
+      & > a {
+        padding: 20px 10px 15px 10px;
+      }
     }
+
+
     li.search {
       form {
-        margin: 8px 0 0 0;
+        margin: 12px 0 0 0;
         width: auto;
       }
     }
@@ -221,19 +229,84 @@ a.list-group-item {
 }
 
 .navbar-fixed-top {
-  background: #fafafa url('../images/sample/bgnoise.gif');
-  max-width: 1020px;
-  margin: 0 auto;
+  -webkit-transform: translateZ(0);
+  transform:  translateZ(0);
+  //background: #fafafa url('../images/sample/bgnoise.gif');
+  .inner-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0px 0 2px;
+  }
+  background: #fff;
   hr {
-    margin: 5px 14px 0 14px;
+    margin: 5px 16px 5px 16px;
     border-top: solid 1px #ddd;
   }
   .navbar-header {
     margin-left: 15px;
-    margin-right: 10px;
+    margin-right: 15px;
   }
   .collapse {
     margin-right: 15px;
   }
+  .navbar-toggle {
+    margin-top: 10px;
+    padding: 7px;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
+.list-group {
+  &.no-separation {
+    li {
+      background: none;
+      border: none;
+      padding: 5px 0;
+    }
+  }
+}
+
+.swipe-nav {
+  li {
+    float: left;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    border-radius: 12px;
+    background: #ccc;
+    border: solid 1px #fff;
+    margin: 0 5px 0 0;
+    &.active {
+      background: #333;
+    }
+    &:hover {
+      background: #555;
+    }
+  }
+}
+
+.slide {
+  margin-left: -25px;
+  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  float:left;
+  width:50%;
+  position: relative;
+}
