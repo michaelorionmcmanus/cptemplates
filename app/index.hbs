@@ -1,22 +1,4 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <script type="text/javascript" src="//use.typekit.net/abg0eao.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-</head>
+{{> head}}
     <body>
     <div class="main phm pbm">
       {{> main-header}}
@@ -93,9 +75,9 @@
               </div>
               <div>
                 <div class="thumbnail mbxs pan">
-                  <img src="images/HOME%20MOVIES_3.jpg" alt=""/>
+                  <img src="images/basma-poster.jpg" alt=""/>
                   <div class="caption pbxs">
-                    <div class="mbxs t-s-100"><span>"Home Movies Gaza" by Basma Alsharif</span></div>
+                    <div class="mbxs t-s-100"><span>Poster by Heather Lane</span></div>
                   </div>
                 </div>
               </div>
@@ -114,7 +96,7 @@
       </div>
       <div class="row mtm">
         <div class="col-md-8">
-          <div class="mbn paxs">
+          <div class="mbn">
             <h4 class="h3 t-caps mtxs mbm">About This Screening</h4>
             <p>
               With a skillful play between moving images, text, translation and voice, the media work of Basma Alsharif calls out the viewer’s position of watching, asking us to reconsider the certainty with which we know the world. Alsharif’s practice evinces an interest in how people relate to and internalize geopolitical shifts that occur within their lifetimes, and those they carry with them from past generations. Weaving structural visual codes with material archives, her aim is to decentralize content and produce work that operates through a multi-vantage perspective, thereby transforming information into a visceral experience. The Neighbour Before the House by collective CAMP is a series of video probes into the landscape of East Jerusalem. Shot with a security camera, these images show that before and after  instrumental “surveillance,” there is inquisitiveness, jest, memory, desire and doubt that pervades the project of watching. In these specific times and places, camera movements and live commentary become ways in which Palestinian residents evaluate what can be seen, and speak about the nature of their distance from others.
@@ -162,17 +144,15 @@
               </ul>
             </div>
           </div>
-
         </div>
-
         <div class="col-md-4">
-
           <h5 class="h3"><span class="glyphicon glyphicon-link"></span> Links & Media</h5>
           <ul class="list-group">
             <a href="#" class="list-group-item">basmaalsharif.com</a>
             <a href="#" class="list-group-item">A vimeo link</a>
             <a href="#" class="list-group-item">A youtube link</a>
             <a href="#" class="list-group-item">Program notes</a>
+            <a href="#" class="list-group-item">Program poster</a>
           </ul>
           <h5 class="h3">This Season - Spring 2013</h5>
           <div class="list-group">
@@ -185,45 +165,13 @@
             <a href="#" class="list-group-item">Differently Molusia and Soviets Plus Electricity</a>
             <a href="#" class="list-group-item">What the Water Said</a>
           </div>
-          <hr>
-          <span class="h3">Sign Up For our Newsletter</span>
-          <form class="form-inline mts" role="form">
-            <div class="form-group">
-              <label class="sr-only" for="exampleInputEmail2">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-            </div>
-            <button type="submit" class="btn btn-default">Sign Up</button>
-          </form>
+          <hr class="mvs">
+          {{> sidebar}}
         </div>
       </div>
     <hr>
-    <div class="row mbm">
-      <div class="col-md-12">
-        <span>© Cinema Project 2003 - 2012 | P.O. Box 5228, Portland, Ore. 97228 | (503) 232-8269</span>
-      </div>
+    {{> footer}}
     </div>
-    </div>
-
-
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-
-        <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/fastclick.js -->
-        <script src="scripts/fastclick.js"></script>
-        <script src="scripts/fastclick.example.js"></script>
-        <!-- endbuild -->
+    {{> footer-scripts}}
 </body>
 </html>

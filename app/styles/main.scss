@@ -261,7 +261,7 @@ a.list-group-item {
 
 .list-group {
   &.no-separation {
-    li {
+    .list-group-item {
       background: none;
       border: none;
       padding: 5px 0;
