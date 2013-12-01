@@ -84,9 +84,9 @@ h1,h2,h3,h4,h5,h6,
 .navbar-brand {
   span {
     @media (min-width: $grid-float-breakpoint) {
-      font-size: 28px;
+      //font-size: 28px;
     }
-    font-size: 20px;
+    //font-size: 20px;
   }
 }
 
@@ -108,7 +108,7 @@ p {
   border: none;
   background: none;
   .navbar-toggle {
-    margin-top: 13px;
+    margin-top: 12px;
   }
 }
 
@@ -144,9 +144,6 @@ p {
 
 }
 
-
-element.style {
-}
 .list-group-item:last-child {
   margin-bottom: 0;
   border-bottom-right-radius: 4px;
@@ -229,6 +226,8 @@ a.list-group-item {
 }
 
 .navbar-fixed-top {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   .inner-wrapper {
     max-width: 1020px;
     margin: 0 auto;
