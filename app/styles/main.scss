@@ -291,6 +291,44 @@ a.list-group-item {
   }
 }
 
+.calendar-menu {
+  li.calendar-item {
+    & > a {
+      white-space: normal;
+      span {
+        display: inline-block;
+        float: left;
+        &.date {
+          width: 100%;
+        }
+        &.details {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .calendar-menu {
+    width: 400px;
+    li.calendar-item {
+      & > a {
+        display: inline-block;
+        padding: 5px 10px !important;
+        span {
+          &.date {
+            min-width: 88px;
+          }
+          &.details {
+            width: 290px;
+            padding: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
 .swipe {
   overflow: hidden;
   visibility: hidden;
