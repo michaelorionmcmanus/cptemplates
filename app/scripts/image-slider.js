@@ -7,7 +7,8 @@ define([
   var navCircles = $("[data-slider-nav] li");
   var slides = $("[data-slider]").find('.swipe-wrap > div');
   var firstSlide;
-  var firstImage;
+  var currentSlide;
+
   function adjustHeight(elem) {
     var $elem = $(elem);
     var parent = $elem.parent();
@@ -17,6 +18,7 @@ define([
 
   if(slides.length > 0 && slides.first()) {
     firstSlide = slides.first();
+    currentSlide = firstSlide;
     firstSlide.css('width', '100%');
     adjustHeight(firstSlide);
     firstSlide.css('width', '50%');
@@ -26,6 +28,7 @@ define([
     transitionEnd: function(index, elem) {
       navCircles.removeClass('active');
       navCircles.filter('[data-slide-to="'+ index +'"]').addClass('active');
+      currentSlide = elem;
     },
     callback: function(index, elem) {
       adjustHeight(elem);
@@ -41,4 +44,21 @@ define([
       $target.addClass('active');
     }
   });
+
+  var didResize = false;
+
+  $(window).resize(function() {
+    didResize = true;
+  });
+
+  setInterval(function() {
+    if ( didResize ) {
+      didResize = false;
+      if(currentSlide) {
+        adjustHeight(currentSlide);
+      }
+      // Check your page position and then
+      // Load in more results
+    }
+  }, 250);
 });
