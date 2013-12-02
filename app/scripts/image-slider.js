@@ -5,10 +5,30 @@ define([
   'use strict';
   var nav = $("[data-slider-nav]");
   var navCircles = $("[data-slider-nav] li");
+  var slides = $("[data-slider]").find('.swipe-wrap > div');
+  var firstSlide;
+  var firstImage;
+  function adjustHeight(elem) {
+    var $elem = $(elem);
+    var parent = $elem.parent();
+    var newHeight = $elem.outerHeight();
+    parent.css('height', newHeight + 'px');
+  };
+
+  if(slides.length > 0 && slides.first()) {
+    firstSlide = slides.first();
+    firstSlide.css('width', '100%');
+    adjustHeight(firstSlide);
+    firstSlide.css('width', '50%');
+  }
+
   var slider = $("[data-slider]").Swipe({
     transitionEnd: function(index, elem) {
       navCircles.removeClass('active');
       navCircles.filter('[data-slide-to="'+ index +'"]').addClass('active');
+    },
+    callback: function(index, elem) {
+      adjustHeight(elem);
     }
   });
 
