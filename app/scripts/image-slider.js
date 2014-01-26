@@ -39,23 +39,13 @@ define([
   });
 
   nav.on('click', function(e) {
-    var $target = $(e.target),
-      slideTo;
-
+    var $target = $(e.target);
     if($target[0].tagName === 'LI') {
-      slideTo = $target.data('slide-to');
-    }
-
-    if($target[0].tagName === 'IMG') {
-      slideTo = $target.parent().data('slide-to');
-    }
-
-    if(slideTo !== false && slideTo > -1) {
+      var slideTo = $target.data('slide-to');
       slider.data('Swipe').slide(slideTo);
       navCircles.removeClass('active');
       $target.addClass('active');
     }
-
   });
 
   var didResize = false;
