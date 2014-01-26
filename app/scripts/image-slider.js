@@ -11,6 +11,9 @@ define([
 
   function adjustHeight(elem) {
     var $elem = $(elem);
+    var imgMaxHeight =  $( window ).height() * 0.65;
+    // Set an absolute max image height;
+    $elem.find('img').css('max-height', imgMaxHeight);
     var parent = $elem.parent();
     var newHeight = $elem.outerHeight();
     parent.css('height', newHeight + 'px');

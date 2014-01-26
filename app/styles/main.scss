@@ -116,10 +116,11 @@ p {
 .navbar-nav {
   background: white;
   margin-top: 0;
-  padding-left: 10px;
   @media (min-width: $grid-float-breakpoint) {
     background: none;
   }
+  padding-left: 0;
+  margin: 0;
   & > li {
     //margin-top: 5px;
     & > a {
@@ -297,7 +298,16 @@ a.list-group-item {
 }
 
 .calendar-menu {
+  li {
+    display: inline-block;
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 0.5em;
+  }
   li.calendar-item {
+    @media (min-width: $grid-float-breakpoint) {
+      border-bottom: none;
+    }
     & > a {
       white-space: normal;
       span {
@@ -335,6 +345,14 @@ a.list-group-item {
   }
 }
 
+.stills {
+  .thumbnail {
+    img {
+      max-height: 100%;
+    }
+  }
+}
+
 @media (min-width: $grid-float-breakpoint) {
   .stills {
     .thumbnail {
@@ -368,4 +386,27 @@ hr {
   float:left;
   width:50%;
   position: relative;
+}
+
+#main-nav > ul {
+  max-width: 100%;
+}
+
+.navbar-search {
+  @extend .navbar-toggle;
+  border: none;
+  font-size: 115%;
+  margin-top: .7em;
+  right: .6em;
+}
+
+.navbar-toggle:focus {
+  outline: none;
+  background-color: transparent !important;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  #search {
+    display: none !important;
+  }
 }

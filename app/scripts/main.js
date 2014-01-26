@@ -21,6 +21,36 @@ require.config({
 require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-slider'], function (app, $) {
   'use strict';
   $(function(){
+    var searchToggle = $('[type=button].navbar-search');
+    var navToggle = $('[type=button].navbar-search');
+    var nav = $('#main-nav');
+    var search = $('#search');
 
+    nav.collapse('hide');
+    search.collapse('hide');
+
+    search.on('shown.bs.collapse', function() {
+      navToggle.blur();
+      searchToggle.blur();
+      nav.collapse('hide');
+      search.find('input').focus();
+    });
+
+    search.on('hidden.bs.collapse', function() {
+      searchToggle.blur();
+    });
+
+    nav.on('shown.bs.collapse', function() {
+      searchToggle.blur();
+      navToggle.blur();
+      search.collapse('hide');
+      // Make it easier to scroll within nav.
+      $('html, body').css('overflow', 'hidden');
+    });
+
+    nav.on('hidden.bs.collapse', function() {
+      navToggle.blur();
+      $('html, body').css('overflow', 'auto');
+    });
   });
 });

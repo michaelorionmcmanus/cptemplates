@@ -24,19 +24,30 @@
     <nav class="navbar navbar-default  mbxs navbar-fixed-top" role="navigation">
 <div class="inner-wrapper"><!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle mbs mrn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle mbs mrn collapsed" data-toggle="collapse" data-target="#main-nav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+        </button>
+        <button type="button" class="navbar-search glyphicon glyphicon-search mbs mrn collapsed" data-toggle="collapse" data-target="#search">
+          <span class="sr-only">Toggle search</span>
         </button>
         <a class="navbar-brand t-caps t-black pln pbn" href="#"><span class="h2">Cinema Project</span><br>
           <!--<span class="t-s-40 display-ib pull-left">Experimental Film and Video  <br> in Portland, OR</span>-->
         </a>
       </div>
 
+  <div class="collapse navbar-collapse phn" id="search">
+    <form action="search">
+      <div class="form-group pal">
+        <input type="text" class="form-control site-search" placeholder="Search...">
+      </div>
+    </form>
+  </div>
+
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse phn" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse phn" id="main-nav">
         <ul class="nav navbar-nav navbar-left t-caps">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schedule <b class="caret"></b></a>
@@ -46,7 +57,7 @@
               <li class="calendar-item"><a href="#"><span class="date">Nov 8 + 9</span><br><span class="details">We Began by Measuring Distance</span></a></li>
               <li class="calendar-item"><a href="#"><span class="date">Nov 25 + 26</span><br><span class="details">Differently, Molussia and Soviets Plus Electricity Differently, Molussia and Soviets Plus Electricity</span></a></li>
               <li class="calendar-item"><a href="#"><span class="date">Dec 12 + 13</span><br><span class="details">What the Water Said</span></a></li>
-              <li><a href="#">Season Overview</a></li>
+              <li class="pbn"><a href="#">Season Overview</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -71,12 +82,12 @@
             </ul>
           </li>
           <li><a href="#">News</a></li>
-          <li class="search">
-            <a href="" class="pull-left hidden-sm hidden-xs"><span class="glyphicon glyphicon-search"></span></a>
+          <li class="search hidden-sm hidden-xs">
+            <a href="" class="pull-left"><span class="glyphicon glyphicon-search"></span></a>
             <form role="form" class="pull-left">
 
             <div class="form-group mbn">
-            <input type="text" class="form-control site-search" placeholder="Site Search...">
+            <input type="text" class="form-control site-search" placeholder="Search...">
             </div>
             </form>
 
