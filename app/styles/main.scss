@@ -347,6 +347,10 @@ a.list-group-item {
 
 .stills {
   .thumbnail {
+    background: black;
+    .caption {
+      background: #fff;
+    }
     img {
       max-height: 100%;
     }
@@ -356,7 +360,6 @@ a.list-group-item {
 @media (min-width: $grid-float-breakpoint) {
   .stills {
     .thumbnail {
-      background: black;
       img {
         max-height: 500px;
         padding: 15px;
