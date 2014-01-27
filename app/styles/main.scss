@@ -434,11 +434,10 @@ hr {
 }
 
 input.form-control {
-  @extend h4;
+  font-family: $headings-font-family;
 }
 
-.btn {
-  &.btn-default {
-    font-family: $headings-font-family;
-  }
+input.form-control,
+.btn.btn-default {
+  font-family: $headings-font-family;
 }
