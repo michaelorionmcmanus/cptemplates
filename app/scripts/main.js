@@ -27,6 +27,7 @@ require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-sli
     var search = $('#search');
     var shown = false;
     var mainNavBar = $('#main-navbar');
+    var main = $('.main');
     var searchClose = $('#search button.close');
 
     nav.collapse('hide');
@@ -38,13 +39,16 @@ require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-sli
       nav.collapse('hide');
       search.find('input').focus();
       shown = true;
-      mainNavBar.hide();
+    });
+
+    search.on('show.bs.collapse', function() {
+      main.hide();
     });
 
     search.on('hidden.bs.collapse', function() {
       searchToggle.blur();
       shown = false;
-      mainNavBar.show();
+      main.show();
     });
 
     nav.on('shown.bs.collapse', function() {
@@ -76,7 +80,6 @@ require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-sli
     function hideAll() {
       if(shown) {
         nav.collapse('hide');
-        search.collapse('hide');
       }
     }
 
