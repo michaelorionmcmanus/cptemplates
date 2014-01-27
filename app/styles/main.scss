@@ -10,6 +10,11 @@ body {
     padding-top: 65px;
 }
 
+a.active {
+  background-color: lightgoldenrodyellow;
+  text-decoration: none !important;
+}
+
 .hero-unit {
     margin: 0 auto;
     max-width: 300px;
@@ -162,7 +167,7 @@ a.list-group-item {
 
 
 .site-search {
-  font-family: "Georgia";
+  font-weight: 200;
   border-radius: 0px;
   background: none;
   border: #ccc solid 1px;
@@ -171,7 +176,7 @@ a.list-group-item {
   padding: 3px 5px;
   font-style: italic;
   margin-top: 3px;
-  font-size: 16px;
+  font-size: 18px;
   @media (min-width: $grid-float-breakpoint) {
     font-size: 14px;
   }
@@ -413,3 +418,14 @@ hr {
     display: none !important;
   }
 }
+
+.nav li,
+.nav li a,
+.breadcrumb li,
+.breadcrumb li a,
+.dropdown-menu > li,
+.dropdown-menu > li > a,
+.dropdown > a {
+  font-weight: 200;
+}
+

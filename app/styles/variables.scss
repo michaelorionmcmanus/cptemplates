@@ -59,7 +59,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
 $headings-font-family:    "ff-dagny-web-pro", sans-serif !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    200 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
@@ -113,7 +113,7 @@ $table-border-color:                 #ddd !default; // table and cell border
 // Buttons
 // -------------------------
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                200 !default;
 
 $btn-default-color:              #333 !default;
 $btn-default-bg:                 #fff !default;

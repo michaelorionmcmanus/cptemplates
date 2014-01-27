@@ -124,6 +124,16 @@ $pm_XL: 30px;
   font-weight: bold;
 }
 
+.t-italic {
+  font-style: italic;
+}
+
+.t-hover-none {
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
 .pointer {
   cursor: pointer;
 }
