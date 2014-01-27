@@ -25,6 +25,7 @@ require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-sli
     var navToggle = $('[type=button].navbar-search');
     var nav = $('#main-nav');
     var search = $('#search');
+    var shown = false;
 
     nav.collapse('hide');
     search.collapse('hide');
@@ -34,10 +35,12 @@ require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-sli
       searchToggle.blur();
       nav.collapse('hide');
       search.find('input').focus();
+      shown = true;
     });
 
     search.on('hidden.bs.collapse', function() {
       searchToggle.blur();
+      shown = false;
     });
 
     nav.on('shown.bs.collapse', function() {
@@ -46,11 +49,32 @@ require(['app', 'jquery', 'bootstrap-collapse', 'bootstrap-dropdown', 'image-sli
       search.collapse('hide');
       // Make it easier to scroll within nav.
       $('html, body').css('overflow', 'hidden');
+      shown= true;
     });
 
     nav.on('hidden.bs.collapse', function() {
       navToggle.blur();
       $('html, body').css('overflow', 'auto');
+      shown = false;
     });
+
+    function throttle(method, scope) {
+      clearTimeout(method._tId);
+      method._tId= setTimeout(function(){
+        method.call(scope);
+      }, 100);
+    }
+
+    function hideAll() {
+      if(shown) {
+        nav.collapse('hide');
+        search.collapse('hide');
+      }
+    }
+
+    window.onresize = function(){
+      throttle(hideAll, window);
+    };
+
   });
 });

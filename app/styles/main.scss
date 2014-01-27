@@ -192,6 +192,7 @@ a.list-group-item {
   & > li > a {
     padding-left: 13px;
     padding-right: 13px;
+    font-size: 1.2em;
   }
   li.search {
     form {
@@ -203,6 +204,9 @@ a.list-group-item {
 
 @media (min-width: $grid-float-breakpoint) {
   .navbar-nav {
+    .dropdown-menu {
+      @include box-shadow(none);
+    }
     float: right !important;
     li {
       & > .dropdown-menu li a {
@@ -308,11 +312,11 @@ a.list-group-item {
     width: 100%;
     border-bottom: solid 1px #ddd;
     padding-bottom: 0.5em;
-  }
-  li.calendar-item {
     @media (min-width: $grid-float-breakpoint) {
       border-bottom: none;
     }
+  }
+  li.calendar-item {
     & > a {
       white-space: normal;
       span {
@@ -429,3 +433,12 @@ hr {
   font-weight: 200;
 }
 
+input.form-control {
+  @extend h4;
+}
+
+.btn {
+  &.btn-default {
+    font-family: $headings-font-family;
+  }
+}
