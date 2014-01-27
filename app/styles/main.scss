@@ -417,11 +417,25 @@ hr {
   background-color: transparent !important;
 }
 
-@media (min-width: $grid-float-breakpoint) {
-  #search {
+
+#search {
+  height: auto;
+  position: absolute;
+  width: 100%;
+  height: 100% !important;
+  background: white;
+  z-index: 100;
+  top: 0;
+  @media (min-width: $grid-float-breakpoint) {
     display: none !important;
   }
+  button.close {
+    opacity: 1;
+    color: black;
+    font-size: 2em;
+  }
 }
+
 
 .nav li,
 .nav li a,
@@ -435,6 +449,7 @@ hr {
 
 input.form-control {
   font-family: $headings-font-family;
+  font-size: 16px;
 }
 
 input.form-control,
